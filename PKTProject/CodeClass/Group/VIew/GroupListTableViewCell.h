@@ -12,7 +12,9 @@
 
 @interface GroupListTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIView
+@property (nonatomic, strong) UIView *topView;
+@property (nonatomic, strong) UIView *middleView;
+@property (nonatomic, strong) UIView *bottomView;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(GroupListModel *)model;
 
