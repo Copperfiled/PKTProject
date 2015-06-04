@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSNumber *membernum;
 
 @property (nonatomic, strong) UserInfoModel *userinfo;
-@property (nonatomic, strong) NSString *tags; //NSString
+@property (nonatomic, strong) NSArray *tags; //NSString
 @property (nonatomic, strong) NSArray  *latestposts;//TopicSketchModel
+
 @end

@@ -19,5 +19,7 @@
 //组
 #define API_GROUP_LIST @"group/group_list"
 #define API_GROUP_HOTLIST @"group/posts_hotlist"
+#define API_GROUP_INFO @"group/group_info"
+#define API_GROUP_DETAIL @"group/group_detail"
 
 #endif

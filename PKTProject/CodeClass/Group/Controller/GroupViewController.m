@@ -7,6 +7,7 @@
 //
 
 #import "GroupViewController.h"
+#import "GroupInfoTableViewController.h"
 
 #import "GroupListModel.h"
 #import "TopicListTableViewCell.h"
@@ -14,6 +15,7 @@
 
 #import "GroupTopicListModel.h"
 #import "CounterListModel.h"
+#import "TopicSketchModel.h"
 
 @interface GroupViewController ()
 
@@ -60,6 +62,9 @@
     _rightTableView.hidden = YES;
     [_leftTableView addSubview:_leftRefreshControl];
     [_rightTableView addSubview:_rightRefreshControl];
+    
+    _leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _rightTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self requestLeftData];
 }
@@ -110,6 +115,17 @@
             for (NSDictionary *dict in dataArray) {
                 GroupListModel *listModel = [GroupListModel new];
                 [listModel setValuesForKeysWithDictionary:dict];
+                
+                listModel.userinfo = [UserInfoModel userInfoWithDictionary:[dict valueForKey:@"userinfo"]];
+                NSArray *array = [dict valueForKey:@"latestposts"];
+                
+                NSMutableArray *mArray = [NSMutableArray array];
+                for (NSDictionary *sketchModelDic in array) {
+                    TopicSketchModel *sketchModel = [[TopicSketchModel alloc]init];
+                    [sketchModel setValuesForKeysWithDictionary:sketchModelDic];
+                    [mArray addObject:sketchModel];
+                }
+                listModel.latestposts = [NSArray arrayWithArray:mArray];
                 [_rightArray addObject:listModel];
             }
         }
@@ -164,30 +180,35 @@
 #pragma mark - data source -
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *leftIdentifier = @"leftCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftIdentifier];
-    
     switch (_segmentControl.selectedSegmentIndex) {
         case 0:
         {
+            static NSString *leftIdentifier = @"leftCell";
+            TopicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftIdentifier];
             GroupTopicListModel *model = _leftArray[indexPath.row];
-            cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftIdentifier model:model];
+            if (!cell) {
+                cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftIdentifier model:model];
+            }
             return cell;
         }
             break;
         case 1:
         {
             static NSString *rigthIdf = @"rightCell";
-            cell = [[GroupListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rigthIdf];
             GroupListModel *model = _rightArray[indexPath.row];
-            cell.textLabel.text = model.title;
+            GroupListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:rigthIdf];
+            if (!cell) {
+                cell = [[GroupListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rigthIdf model:model];
+            }
+            cell.delegate = self;
+//            cell.textLabel.text = model.title;
             return cell;
         }
             break;
         default:
             break;
     }
-    return cell;
+    return nil;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -210,9 +231,24 @@
     if (tableView == _leftTableView) {
         return 160;
     }
-    return 60;
+    return 220;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == _rightTableView) {
+        GroupInfoTableViewController *groupInfoVC = [GroupInfoTableViewController new];
+        GroupListModel *model = _rightArray[indexPath.row];
+        groupInfoVC.groupid = model.groupid;
+        [self.navigationController pushViewController:groupInfoVC animated:YES];
+    }
 }
 
+
+#pragma mark - Group List Table View Cell delegate -
+- (void)cellSketchViewContentid:(NSString *)contentid
+{
+    NSLog(@"contentid = %@", contentid);
+}
 /*
 #pragma mark - Navigation
 

@@ -23,11 +23,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         CGSize size = frame.size;
-        _leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, size.width/3, size.height)];
+        _leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, size.width/2, size.height)];
         _leftLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:_leftLabel];
         
-        _rightLabel = [[UILabel alloc]initWithFrame:CGRectMake(2 * size.width / 3, 0, size.width / 3, size.height)];
+        _rightLabel = [[UILabel alloc]initWithFrame:CGRectMake(size.width / 2, 0, size.width / 2, size.height)];
         _rightLabel.textAlignment = NSTextAlignmentRight;
         [self addSubview:_rightLabel];
     }

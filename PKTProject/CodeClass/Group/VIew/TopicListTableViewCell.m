@@ -57,11 +57,13 @@
         
         _bottomLabel = [[LLCustomView alloc]initWithFrame:CGRectMake(20, 130, SCREEN_WIDTH - 40, 20)];
         
-        _bottomLabel.leftLabel.font = [UIFont boldSystemFontOfSize:12];
+        _bottomLabel.leftLabel.font = [UIFont systemFontOfSize:12];
         _bottomLabel.leftLabel.text = model.addtime_f;
+        _bottomLabel.leftLabel.textColor = [UIColor grayColor];
         
-        _bottomLabel.rightLabel.font = [UIFont boldSystemFontOfSize:12];
+        _bottomLabel.rightLabel.font = [UIFont systemFontOfSize:12];
         _bottomLabel.rightLabel.text = [NSString stringWithFormat:@"comments:%d", model.counterList.comment];
+        _bottomLabel.rightLabel.textColor = [UIColor grayColor];
         [self.contentView addSubview:_bottomLabel];
     }
     return self;

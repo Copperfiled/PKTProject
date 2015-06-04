@@ -15,6 +15,7 @@
 		322D77E81B1EAA2000CC0841 /* GroupTopicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77E71B1EAA2000CC0841 /* GroupTopicListModel.m */; };
 		322D77EB1B1EAFF400CC0841 /* LLCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77EA1B1EAFF400CC0841 /* LLCustomView.m */; };
 		322D77ED1B1ECDD800CC0841 /* topic_music_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 322D77EC1B1ECDD800CC0841 /* topic_music_icon.png */; };
+		322D77F31B1F2C3800CC0841 /* TopicSketchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77F21B1F2C3800CC0841 /* TopicSketchModel.m */; };
 		32DC685F1B1D39C200B2772D /* DebrisDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC685C1B1D39C200B2772D /* DebrisDetailModel.m */; };
 		32DC68601B1D39C200B2772D /* DebrisListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC685E1B1D39C200B2772D /* DebrisListModel.m */; };
 		32DC68691B1D3AF900B2772D /* CounterListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC68621B1D3AF900B2772D /* CounterListModel.m */; };
@@ -33,6 +34,11 @@
 		32DC68911B1D89B900B2772D /* pull_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC68891B1D89B900B2772D /* pull_refresh@3x.png */; };
 		32DC68941B1DE0A000B2772D /* DebrisDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC68931B1DE0A000B2772D /* DebrisDetailViewController.m */; };
 		32DC68971B1DEA5800B2772D /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC68961B1DEA5800B2772D /* UserInfoView.m */; };
+		32FBBA391B1FDD6700F4200D /* GroupInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBBA381B1FDD6700F4200D /* GroupInfoTableViewController.m */; };
+		32FBBA3C1B1FE3DE00F4200D /* GroupInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBBA3B1B1FE3DE00F4200D /* GroupInfoModel.m */; };
+		32FBBA3F1B1FF87C00F4200D /* GroupDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBBA3E1B1FF87C00F4200D /* GroupDetailTableViewController.m */; };
+		32FBBA421B1FFB0300F4200D /* GroupDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBBA411B1FFB0300F4200D /* GroupDetailModel.m */; };
+		32FBBA451B20041D00F4200D /* ImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBBA441B20041D00F4200D /* ImageLabelView.m */; };
 		6FFE5F451B19FB0700F9F2CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE5F441B19FB0700F9F2CE /* main.m */; };
 		6FFE5F4A1B19FB0700F9F2CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE5F491B19FB0700F9F2CE /* Images.xcassets */; };
 		6FFE5F4D1B19FB0700F9F2CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE5F4B1B19FB0700F9F2CE /* LaunchScreen.xib */; };
@@ -86,6 +92,8 @@
 		322D77E91B1EAFF400CC0841 /* LLCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCustomView.h; sourceTree = "<group>"; };
 		322D77EA1B1EAFF400CC0841 /* LLCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCustomView.m; sourceTree = "<group>"; };
 		322D77EC1B1ECDD800CC0841 /* topic_music_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topic_music_icon.png; sourceTree = "<group>"; };
+		322D77F11B1F2C3800CC0841 /* TopicSketchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicSketchModel.h; sourceTree = "<group>"; };
+		322D77F21B1F2C3800CC0841 /* TopicSketchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicSketchModel.m; sourceTree = "<group>"; };
 		325309F71B1C88950043C84B /* APPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHeader.h; sourceTree = "<group>"; };
 		325309F81B1C8C270043C84B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		32DC685B1B1D39C200B2772D /* DebrisDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebrisDetailModel.h; sourceTree = "<group>"; };
@@ -122,6 +130,16 @@
 		32DC68931B1DE0A000B2772D /* DebrisDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebrisDetailViewController.m; sourceTree = "<group>"; };
 		32DC68951B1DEA5800B2772D /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		32DC68961B1DEA5800B2772D /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		32FBBA371B1FDD6700F4200D /* GroupInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInfoTableViewController.h; sourceTree = "<group>"; };
+		32FBBA381B1FDD6700F4200D /* GroupInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInfoTableViewController.m; sourceTree = "<group>"; };
+		32FBBA3A1B1FE3DE00F4200D /* GroupInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInfoModel.h; sourceTree = "<group>"; };
+		32FBBA3B1B1FE3DE00F4200D /* GroupInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInfoModel.m; sourceTree = "<group>"; };
+		32FBBA3D1B1FF87C00F4200D /* GroupDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailTableViewController.h; sourceTree = "<group>"; };
+		32FBBA3E1B1FF87C00F4200D /* GroupDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailTableViewController.m; sourceTree = "<group>"; };
+		32FBBA401B1FFB0300F4200D /* GroupDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailModel.h; sourceTree = "<group>"; };
+		32FBBA411B1FFB0300F4200D /* GroupDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailModel.m; sourceTree = "<group>"; };
+		32FBBA431B20041D00F4200D /* ImageLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelView.h; sourceTree = "<group>"; };
+		32FBBA441B20041D00F4200D /* ImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelView.m; sourceTree = "<group>"; };
 		6FFE5F3F1B19FB0700F9F2CE /* PKTProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKTProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFE5F431B19FB0700F9F2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FFE5F441B19FB0700F9F2CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -199,6 +217,10 @@
 			children = (
 				322D77D61B1E999500CC0841 /* GroupViewController.h */,
 				322D77D71B1E999500CC0841 /* GroupViewController.m */,
+				32FBBA371B1FDD6700F4200D /* GroupInfoTableViewController.h */,
+				32FBBA381B1FDD6700F4200D /* GroupInfoTableViewController.m */,
+				32FBBA3D1B1FF87C00F4200D /* GroupDetailTableViewController.h */,
+				32FBBA3E1B1FF87C00F4200D /* GroupDetailTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,6 +514,8 @@
 				32DC68961B1DEA5800B2772D /* UserInfoView.m */,
 				322D77E91B1EAFF400CC0841 /* LLCustomView.h */,
 				322D77EA1B1EAFF400CC0841 /* LLCustomView.m */,
+				32FBBA431B20041D00F4200D /* ImageLabelView.h */,
+				32FBBA441B20041D00F4200D /* ImageLabelView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +537,12 @@
 				322D77CF1B1E962C00CC0841 /* GroupListModel.m */,
 				322D77E61B1EAA2000CC0841 /* GroupTopicListModel.h */,
 				322D77E71B1EAA2000CC0841 /* GroupTopicListModel.m */,
+				322D77F11B1F2C3800CC0841 /* TopicSketchModel.h */,
+				322D77F21B1F2C3800CC0841 /* TopicSketchModel.m */,
+				32FBBA3A1B1FE3DE00F4200D /* GroupInfoModel.h */,
+				32FBBA3B1B1FE3DE00F4200D /* GroupInfoModel.m */,
+				32FBBA401B1FFB0300F4200D /* GroupDetailModel.h */,
+				32FBBA411B1FFB0300F4200D /* GroupDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,8 +734,10 @@
 				32DC686B1B1D3AF900B2772D /* TagInfoModel.m in Sources */,
 				6FFE5F981B19FEDE00F9F2CE /* UIButton+WebCache.m in Sources */,
 				6FFE5F9D1B19FEDE00F9F2CE /* UIImageView+WebCache.m in Sources */,
+				32FBBA3C1B1FE3DE00F4200D /* GroupInfoModel.m in Sources */,
 				32DC68751B1D41B900B2772D /* DebrisListViewCell.m in Sources */,
 				322D77E21B1E9A4500CC0841 /* TopicListTableViewCell.m in Sources */,
+				322D77F31B1F2C3800CC0841 /* TopicSketchModel.m in Sources */,
 				6FFE5F931B19FEDE00F9F2CE /* SDWebImageDecoder.m in Sources */,
 				322D77EB1B1EAFF400CC0841 /* LLCustomView.m in Sources */,
 				32DC688F1B1D89B900B2772D /* PKTRefreshTopView.m in Sources */,
@@ -719,10 +751,12 @@
 				32DC688E1B1D89B900B2772D /* PKTRefreshBottomView.m in Sources */,
 				6FFE5F951B19FEDE00F9F2CE /* SDWebImageDownloaderOperation.m in Sources */,
 				32DC688C1B1D89B900B2772D /* RefreshView.m in Sources */,
+				32FBBA451B20041D00F4200D /* ImageLabelView.m in Sources */,
 				6FFE5F961B19FEDE00F9F2CE /* SDWebImageManager.m in Sources */,
 				322D77D11B1E962C00CC0841 /* GroupListModel.m in Sources */,
 				322D77E51B1E9F8700CC0841 /* TopicContentView.m in Sources */,
 				32DC686A1B1D3AF900B2772D /* ShareInfoModel.m in Sources */,
+				32FBBA421B1FFB0300F4200D /* GroupDetailModel.m in Sources */,
 				6FFE5F9A1B19FEDE00F9F2CE /* UIImage+MultiFormat.m in Sources */,
 				6FFE5F971B19FEDE00F9F2CE /* SDWebImagePrefetcher.m in Sources */,
 				322D77DF1B1E9A1800CC0841 /* GroupListTableViewCell.m in Sources */,
@@ -731,7 +765,9 @@
 				32DC68601B1D39C200B2772D /* DebrisListModel.m in Sources */,
 				6FFE5FCD1B1AD3DA00F9F2CE /* HomeViewController.m in Sources */,
 				6FFE5FD01B1AD3E800F9F2CE /* RadioViewController.m in Sources */,
+				32FBBA391B1FDD6700F4200D /* GroupInfoTableViewController.m in Sources */,
 				32DC68691B1D3AF900B2772D /* CounterListModel.m in Sources */,
+				32FBBA3F1B1FF87C00F4200D /* GroupDetailTableViewController.m in Sources */,
 				32DC688D1B1D89B900B2772D /* PKTRefreshControl.m in Sources */,
 				32DC68971B1DEA5800B2772D /* UserInfoView.m in Sources */,
 				6FFE5F911B19FEDE00F9F2CE /* SDImageCache.m in Sources */,

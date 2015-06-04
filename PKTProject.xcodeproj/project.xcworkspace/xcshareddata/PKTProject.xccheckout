@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B2BE9B09-EE13-49AB-BEF0-B759856ACE4E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PKTProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0F2885E42593B1F3E39302619E99202BFB013B15</key>
+		<string>https://github.com/Copperfiled/PKTProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PKTProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0F2885E42593B1F3E39302619E99202BFB013B15</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Copperfiled/PKTProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0F2885E42593B1F3E39302619E99202BFB013B15</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0F2885E42593B1F3E39302619E99202BFB013B15</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PKTProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

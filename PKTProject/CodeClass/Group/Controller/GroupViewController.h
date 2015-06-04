@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "GroupListTableViewCell.h"
+
+@interface GroupViewController : UIViewController<UITableViewDataSource,UITableViewDelegate, GroupListTableViewCellDelegate>
 
 @property (nonatomic, strong) UISegmentedControl *segmentControl;//segment
 @property (nonatomic, strong) UITableView *leftTableView;
