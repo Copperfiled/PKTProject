@@ -17,12 +17,11 @@
 
 
 @property (nonatomic, strong) NSString *pic;
-
 @property (nonatomic, strong) NSString *text;
-
 @property (nonatomic, strong) NSString *title;
-
 @property (nonatomic, strong) NSString *url;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 + (instancetype)shareInfoWithDictionary:(NSDictionary *)dic;
+
 @end

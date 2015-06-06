@@ -23,6 +23,8 @@
 		32A68F2E1B21E1D40095DD90 /* RadioInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A68F2D1B21E1D40095DD90 /* RadioInfoModel.m */; };
 		32B8514F1B22853400E128DA /* RadioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B8514E1B22853400E128DA /* RadioCollectionViewCell.m */; };
 		32D6FA801B2292FF00269A98 /* RadioCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D6FA7F1B2292FF00269A98 /* RadioCollectionReusableView.m */; };
+		32D6FA831B22C9AF00269A98 /* RadioDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D6FA821B22C9AF00269A98 /* RadioDetailTableViewController.m */; };
+		32D6FA861B22CF6000269A98 /* MusicInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D6FA851B22CF6000269A98 /* MusicInfoModel.m */; };
 		32DC685F1B1D39C200B2772D /* DebrisDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC685C1B1D39C200B2772D /* DebrisDetailModel.m */; };
 		32DC68601B1D39C200B2772D /* DebrisListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC685E1B1D39C200B2772D /* DebrisListModel.m */; };
 		32DC68691B1D3AF900B2772D /* CounterListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC68621B1D3AF900B2772D /* CounterListModel.m */; };
@@ -121,6 +123,10 @@
 		32B8514E1B22853400E128DA /* RadioCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCollectionViewCell.m; sourceTree = "<group>"; };
 		32D6FA7E1B2292FF00269A98 /* RadioCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCollectionReusableView.h; sourceTree = "<group>"; };
 		32D6FA7F1B2292FF00269A98 /* RadioCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCollectionReusableView.m; sourceTree = "<group>"; };
+		32D6FA811B22C9AF00269A98 /* RadioDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioDetailTableViewController.h; sourceTree = "<group>"; };
+		32D6FA821B22C9AF00269A98 /* RadioDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioDetailTableViewController.m; sourceTree = "<group>"; };
+		32D6FA841B22CF6000269A98 /* MusicInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoModel.h; sourceTree = "<group>"; };
+		32D6FA851B22CF6000269A98 /* MusicInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoModel.m; sourceTree = "<group>"; };
 		32DC685B1B1D39C200B2772D /* DebrisDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebrisDetailModel.h; sourceTree = "<group>"; };
 		32DC685C1B1D39C200B2772D /* DebrisDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebrisDetailModel.m; sourceTree = "<group>"; };
 		32DC685D1B1D39C200B2772D /* DebrisListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebrisListModel.h; sourceTree = "<group>"; };
@@ -663,6 +669,8 @@
 			children = (
 				6FFE5FCE1B1AD3E800F9F2CE /* RadioViewController.h */,
 				6FFE5FCF1B1AD3E800F9F2CE /* RadioViewController.m */,
+				32D6FA811B22C9AF00269A98 /* RadioDetailTableViewController.h */,
+				32D6FA821B22C9AF00269A98 /* RadioDetailTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -672,6 +680,8 @@
 			children = (
 				32A68F2C1B21E1D40095DD90 /* RadioInfoModel.h */,
 				32A68F2D1B21E1D40095DD90 /* RadioInfoModel.m */,
+				32D6FA841B22CF6000269A98 /* MusicInfoModel.h */,
+				32D6FA851B22CF6000269A98 /* MusicInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -823,9 +833,11 @@
 				322D77E51B1E9F8700CC0841 /* TopicContentView.m in Sources */,
 				32FBBA891B207AA500F4200D /* UserDetailInfoModel.m in Sources */,
 				32A68F251B21D63E0095DD90 /* MusicPlayerView.m in Sources */,
+				32D6FA831B22C9AF00269A98 /* RadioDetailTableViewController.m in Sources */,
 				32DC686A1B1D3AF900B2772D /* ShareInfoModel.m in Sources */,
 				32FBBA481B2042CB00F4200D /* UILabel+AdjustHeightForLabel.m in Sources */,
 				32D6FA801B2292FF00269A98 /* RadioCollectionReusableView.m in Sources */,
+				32D6FA861B22CF6000269A98 /* MusicInfoModel.m in Sources */,
 				32FBBA421B1FFB0300F4200D /* GroupDetailModel.m in Sources */,
 				6FFE5F9A1B19FEDE00F9F2CE /* UIImage+MultiFormat.m in Sources */,
 				6FFE5F971B19FEDE00F9F2CE /* SDWebImagePrefetcher.m in Sources */,

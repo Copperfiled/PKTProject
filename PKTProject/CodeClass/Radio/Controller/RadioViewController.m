@@ -7,6 +7,7 @@
 //
 
 #import "RadioViewController.h"
+#import "RadioDetailTableViewController.h"
 
 #import "RadioCollectionViewCell.h"
 #import "RadioCollectionReusableView.h"
@@ -193,7 +194,10 @@
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, cell.frame.size.height - 20, cell.frame.size.width, 20)];
     label.textAlignment = NSTextAlignmentLeft;
-    //    label.backgroundColor = [UIColor blackColor];
+    
+#warning 如果不添加会有重影，有待进一步解决
+    label.backgroundColor = [UIColor whiteColor];
+    
     label.textColor = [UIColor grayColor];
     label.font = [UIFont systemFontOfSize:10];
     
@@ -247,6 +251,22 @@
     }
     
     return headerView;
+}
+
+#pragma mark - table view delegate -
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RadioInfoModel *model = [RadioInfoModel new];
+    if (0 == indexPath.section) {
+        model = _hotListArray[indexPath.row];
+    }
+    else
+    {
+        model = _allListArray[indexPath.row];
+    }
+    RadioDetailTableViewController *detailVC = [[RadioDetailTableViewController alloc]initWithStyle:UITableViewStyleGrouped radioId:model.radioid];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 #pragma mark - table view flow layout delegate -

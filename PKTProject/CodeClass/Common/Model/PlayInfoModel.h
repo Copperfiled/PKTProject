@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class UserInfo;
-@class ShareInfo;
+@class UserInfoModel;
+@class ShareInfoModel;
 
 @interface PlayInfoModel : NSObject
 
@@ -18,8 +18,8 @@
 @property (nonatomic, strong) NSString *musicUrl;
 @property (nonatomic, strong) NSString *tingid;
 
-@property (nonatomic, strong) UserInfo *userinfo;
-@property (nonatomic, strong) UserInfo *authorinfo;
+@property (nonatomic, strong) UserInfoModel *userinfo;
+@property (nonatomic, strong) UserInfoModel *authorinfo;
 
 @property (nonatomic, strong) NSString *webview_url;
 @property (nonatomic, strong) NSString *ting_contentid;
@@ -27,8 +27,11 @@
 @property (nonatomic, strong) NSString *sharetext;
 @property (nonatomic, strong) NSString *shareurl;
 
-@property (nonatomic, strong) ShareInfo *shareinfo;
+@property (nonatomic, strong) ShareInfoModel *shareinfo;
 
 @property (nonatomic, assign) BOOL isnew;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
++ (instancetype)playInfoWithDictionary:(NSDictionary *)dic;
 
 @end
