@@ -83,18 +83,18 @@
 }
 
 
-- (void)canEngageRefresh
+- (void)canEngagePKTRefresh
 {
     [UIView animateWithDuration:0.25 animations:^{
         _imageView.transform=CGAffineTransformMakeRotation(M_PI);
     }];
     
 }
-- (void)didDisengageRefresh
+- (void)didDisengagePKTRefresh
 {
     [self resetViews];
 }
-- (void)startRefreshing
+- (void)startPKTRefreshing
 {
     _imageView.image=[UIImage imageNamed:@"pull_loading@2x.png"];
     
@@ -107,7 +107,7 @@
     [_imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
 }
-- (void)finishRefreshing
+- (void)finishPKTRefreshing
 {
     [_imageView.layer removeAnimationForKey:@"rotationAnimation"];
     _imageView.transform=CGAffineTransformIdentity;

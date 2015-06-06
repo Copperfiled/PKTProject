@@ -24,8 +24,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         CGSize size = frame.size;
-        _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, size.width / 6, size.width / 6)];
-        if (url.length > 0) {
+        CGFloat height = size.width / 6 > frame.size.height ? frame.size.height : size.width / 6;
+        _imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, size.width / 6, height)];
+        if (url) {
             [_imgView sd_setImageWithURL:[NSURL URLWithString:url]];
         }
         else

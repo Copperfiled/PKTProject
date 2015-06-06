@@ -17,7 +17,10 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) TopicContentView *topicView;
 @property (nonatomic, strong) LLCustomView *bottomLabel;
+@property (nonatomic, strong) GroupTopicListModel *topicListModel;
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(GroupTopicListModel *)model;
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+- (void)setTopicListModel:(GroupTopicListModel *)topicListModel reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

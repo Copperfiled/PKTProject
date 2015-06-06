@@ -113,8 +113,11 @@
     bottomLabel.leftLabel.font = [UIFont systemFontOfSize:12];
     bottomLabel.rightLabel.font = [UIFont systemFontOfSize:12];
     bottomLabel.rightLabel.textAlignment = NSTextAlignmentLeft;
-    bottomLabel.leftLabel.text = [NSString stringWithFormat:@"成员:%@", _groupInfoModel.membernum];
-    bottomLabel.rightLabel.text = [NSString stringWithFormat:@"话题:%@", _groupInfoModel.postsnum];
+//    if (!!_groupInfoModel.membernum) {
+        bottomLabel.leftLabel.text = [NSString stringWithFormat:@"成员:%@", _groupInfoModel.membernum];
+        bottomLabel.rightLabel.text = [NSString stringWithFormat:@"话题:%@", _groupInfoModel.postsnum];
+//    }
+    
     [view addSubview:bottomLabel];
     
     UIButton *joinBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -129,12 +132,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TopicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse"];
-    if (!cell) {
-        cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuse" model:_postslistArray[indexPath.row]];
-    }
-    // Configure the cell...
+    static NSString *reuseIdf = @"reuse";
+    GroupTopicListModel *model = _postslistArray[indexPath.row];
     
+    if (model.coverimg.length > 0) {
+        reuseIdf = @"imageIdf";
+    } else if (model.songid.length > 0)
+    {
+        reuseIdf = @"nusicIdf";
+    }
+    else
+    {
+        reuseIdf = @"textIdf";
+    }
+    TopicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdf];
+    if (!cell) {
+        cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdf];
+    }
+    [cell setTopicListModel:model reuseIdentifier:reuseIdf];
+    // Configure the cell...
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

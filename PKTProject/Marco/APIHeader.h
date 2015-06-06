@@ -22,4 +22,15 @@
 #define API_GROUP_INFO @"group/group_info"
 #define API_GROUP_DETAIL @"group/group_detail"
 
+#define API_PROFILE_INFO @"profile/info"
+#define API_PROFILE_FEED @"profile/feed"
+#define API_PROFILE_relation @"profile/relation"
+
+//电台
+#define API_RADIO @"ting/radio"
+#define API_RADIO_INFO @"ting/info"
+#define API_RADIO_LIST @"ting/radio_list"
+#define API_RADIO_DETAIL @"ting/radio_detail"
+#define API_RADIO_DETAIL_LIST @"ting/radio_detail_list"
+
 #endif

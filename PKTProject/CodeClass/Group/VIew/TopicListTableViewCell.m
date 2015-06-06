@@ -26,7 +26,7 @@
     // Configure the view for the selected state
 }
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(GroupTopicListModel *)model
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -36,21 +36,18 @@
         _titleLabel.textAlignment = NSTextAlignmentLeft;
         _titleLabel.numberOfLines = 2;
         _titleLabel.font = [UIFont boldSystemFontOfSize:20];
-        _titleLabel.text = model.title;
+        
         [self.contentView addSubview:_titleLabel];
         
-        if (model.coverimg.length > 0) {
+        if ([reuseIdentifier isEqualToString:@"imageIdf"]) {
             //text and image
             _topicView = [[TopicContentView alloc]initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 80) viewType:TopicContentViewImage];
-            [_topicView setTopicListModel:model viewType:TopicContentViewImage];
-        } else if (model.songid.length <= 0)
+        } else if ([reuseIdentifier isEqualToString:@"textIdf"])
         {
             _topicView = [[TopicContentView alloc]initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 80) viewType:TopicContentViewText];
-            [_topicView setTopicListModel:model viewType:TopicContentViewText];
         }
-        else if (model.songid.length > 0) {
+        else {
             _topicView = [[TopicContentView alloc]initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 80) viewType:TopicContentViewMusic];
-            [_topicView setTopicListModel:model viewType:TopicContentViewMusic];
         }
 //        [_topicView setTopicListModel:model viewType:<#(enum TopicContentViewType)#>];
         [self.contentView addSubview:_topicView];
@@ -58,15 +55,36 @@
         _bottomLabel = [[LLCustomView alloc]initWithFrame:CGRectMake(20, 130, SCREEN_WIDTH - 40, 20)];
         
         _bottomLabel.leftLabel.font = [UIFont systemFontOfSize:12];
-        _bottomLabel.leftLabel.text = model.addtime_f;
         _bottomLabel.leftLabel.textColor = [UIColor grayColor];
         
         _bottomLabel.rightLabel.font = [UIFont systemFontOfSize:12];
-        _bottomLabel.rightLabel.text = [NSString stringWithFormat:@"comments:%d", model.counterList.comment];
         _bottomLabel.rightLabel.textColor = [UIColor grayColor];
         [self.contentView addSubview:_bottomLabel];
     }
     return self;
+}
+
+- (void)setTopicListModel:(GroupTopicListModel *)topicListModel reuseIdentifier:(NSString *)reuseIdentifier
+{
+    _topicListModel = topicListModel;
+    //添加数据
+    //title
+    _titleLabel.text = _topicListModel.title;
+    
+    //topicView
+    if ([reuseIdentifier isEqualToString:@"imageIdf"]) {
+        [_topicView setTopicListModel:_topicListModel viewType:TopicContentViewImage];
+    }
+    else if([reuseIdentifier isEqualToString:@"textIdf"])
+    {
+        [_topicView setTopicListModel:_topicListModel viewType:TopicContentViewText];
+    }
+    else
+    {
+        [_topicView setTopicListModel:_topicListModel viewType:TopicContentViewMusic];
+    }
+    _bottomLabel.leftLabel.text = _topicListModel.addtime_f;
+    _bottomLabel.rightLabel.text = [NSString stringWithFormat:@"comments:%d", _topicListModel.counterList.comment];
 }
 
 @end

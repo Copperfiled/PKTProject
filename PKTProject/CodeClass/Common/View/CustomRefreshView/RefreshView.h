@@ -36,10 +36,15 @@
 
 - (void)resetLayoutSubViews;
 
-- (void)canEngageRefresh;
-- (void)didDisengageRefresh;
-- (void)startRefreshing;
-- (void)finishRefreshing;
+- (void)canEngagePKTRefresh;
+- (void)didDisengagePKTRefresh;
+- (void)startPKTRefreshing;
+- (void)finishPKTRefreshing;
+
+//- (void)canEngageRefresh;
+//- (void)didDisengageRefresh;
+//- (void)startRefreshing;
+//- (void)finishRefreshing;
 
 
 @end

@@ -50,6 +50,7 @@
     _collectionView.dataSource = self;
     
     [self.view addSubview:_collectionView];
+    //设置为不透明
     self.navigationController.navigationBar.translucent = NO;
     /**
      * 上拉刷新，下拉加载s
@@ -59,7 +60,7 @@
     _PKTRefreshCotrol.topEnabled = YES;
     _PKTRefreshCotrol.bottomEnabled = YES;
     /*
-     * 在这里可以注册一个自定义的刷新师视图
+     * 在这里可以注册一个自定义的刷新视图
      */
     [_PKTRefreshCotrol registerClassForTopView:[RefreshView class]];
     _dataSourceArray = [NSMutableArray new];
@@ -106,6 +107,7 @@
     //下拉刷新
     [PKTRequestManager postRequestWithURL:API_TIMELINE_LIST paramters:@{@"limit":@20} finshedBlock:^(id dataResponse) {
         if (dataResponse) {
+            [_dataSourceArray removeAllObjects];
             NSDictionary *dic = dataResponse;
             NSArray *array = [[dic valueForKey:@"data"] valueForKey:@"list"];
             [_dataSourceArray removeAllObjects];

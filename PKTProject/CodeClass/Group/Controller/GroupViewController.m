@@ -55,9 +55,10 @@
     _segmentControl.selectedSegmentIndex = 0;
     [_segmentControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentControl];
-    
+//    self.navigationController.navigationBar.translucent = NO;
     [self.view addSubview:self.leftTableView];
     [self.view addSubview:self.rightTableView];
+    
     _leftTableView.hidden = NO;
     _rightTableView.hidden = YES;
     [_leftTableView addSubview:_leftRefreshControl];
@@ -180,15 +181,31 @@
 #pragma mark - data source -
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    GroupTopicListModel *model = _leftArray[indexPath.row];
+    NSString *leftIdentifier = @"left";
+    if (model.songid.length > 0)
+    {
+        leftIdentifier = @"musicIdf";
+    }
+    else if (model.coverimg.length > 0) {
+        leftIdentifier = @"imageIdf";
+    }
+    else
+    {
+        leftIdentifier = @"textIdf";
+    }
+    
+    TopicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftIdentifier];
+    
     switch (_segmentControl.selectedSegmentIndex) {
         case 0:
         {
-            static NSString *leftIdentifier = @"leftCell";
-            TopicListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftIdentifier];
-            GroupTopicListModel *model = _leftArray[indexPath.row];
             if (!cell) {
-                cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftIdentifier model:model];
+                cell = [[TopicListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftIdentifier];
             }
+            [cell setTopicListModel:_leftArray[indexPath.row] reuseIdentifier:leftIdentifier];
+            //取消选中色
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
             break;
@@ -200,8 +217,10 @@
             if (!cell) {
                 cell = [[GroupListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rigthIdf model:model];
             }
-            cell.delegate = self;
 //            cell.textLabel.text = model.title;
+            cell.delegate = self;
+            //取消选中颜色
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
             break;

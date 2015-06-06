@@ -120,7 +120,8 @@
             imgView.image = [UIImage createImageWithColor:[UIColor grayColor]];
             //标题
             UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, width - 20, width / 4)];
-            titleLabel.font = [UIFont systemFontOfSize:15];
+            titleLabel.font = [UIFont systemFontOfSize:13];
+            titleLabel.numberOfLines = 0;
             titleLabel.text = sketchModel.title;
             [imgView addSubview:titleLabel];
             

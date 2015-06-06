@@ -7,12 +7,14 @@
 //
 
 #import "GroupDetailTableViewController.h"
+#import "UserDetailTableViewController.h"
 
 #import "GroupDetailModel.h"
 #import "UserInfoModel.h"
 
 #import "ImageLabelView.h"
 #import "LLCustomView.h"
+#import "UILabel+AdjustHeightForLabel.h"
 
 @interface GroupDetailTableViewController ()
 
@@ -139,14 +141,20 @@
             UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(20, 40, SCREEN_WIDTH - 40, height - 40 - 30)];
 //            scrollView.contentSize = CGSizeMake(SCREEN_WIDTH - 40, 300);
             
-            UILabel *contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, SCREEN_WIDTH - 40, height - 40 - 30)];
-            contentLabel.backgroundColor = [UIColor redColor];
+            UILabel *contentLabel = [[UILabel alloc]init];
+            contentLabel.font = FONT;
             contentLabel.text = _groupDetailModel.desc;
-            [cell.contentView addSubview:contentLabel];
+            contentLabel.frame = CGRectMake(0, 0, SCREEN_WIDTH - 40, [UILabel heightForLabel:contentLabel.text].height);
+            NSLog(@"contentLabel frame : %@", NSStringFromCGRect(contentLabel.frame));
+//            contentLabel.backgroundColor = [UIColor redColor];
+            
+            [scrollView addSubview:contentLabel];
+            scrollView.contentSize = CGSizeMake(SCREEN_WIDTH - 40, contentLabel.frame.size.height);
+            [cell.contentView addSubview:scrollView];
             
             UIButton *joinBtn = [UIButton buttonWithType:UIButtonTypeSystem];
             [joinBtn setTitle:@"加入小组" forState:UIControlStateNormal];
-            joinBtn.frame = CGRectMake(0, CGRectGetMaxY(contentLabel.frame), SCREEN_WIDTH, 30);
+            joinBtn.frame = CGRectMake(0, CGRectGetMaxY(scrollView.frame), SCREEN_WIDTH, 30);
             joinBtn.tintColor = [UIColor whiteColor];
             joinBtn.backgroundColor = [UIColor grayColor];
             [cell.contentView addSubview:joinBtn];
@@ -155,7 +163,8 @@
         default:
             break;
     }
-    
+    //取消选中变色
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -168,7 +177,16 @@
         return SCREEN_HEIGHT - 80 * 3 - 64 - 49;
     }
 }
-
+#pragma mark - table view delegate -
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+        //跳到个人详情界面
+        UserDetailTableViewController *detailVC = [[UserDetailTableViewController alloc]init];
+        detailVC.uid = _groupDetailModel.userinfo.uid;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

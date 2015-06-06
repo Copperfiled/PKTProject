@@ -41,8 +41,7 @@
     }
     else{
         self.bottomClass=NSStringFromClass([PKTRefreshBottomView class]);
-    }
-    
+    }    
 }
 
 
@@ -61,8 +60,6 @@
         self.enableInsetBottom = 65.0;
         [_scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
         [_scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld|NSKeyValueObservingOptionPrior context:NULL];
-        
-        
     }
     
     return self;
@@ -87,14 +84,14 @@
     else if([keyPath isEqualToString:@"contentOffset"])
     {
         if (_PKTRefreshingDirection==PKTRefreshingDirectionNone) {
-            [self _drogForChange:change];
+            [self _dragForChange:change];
         }
     }
     
     
 }
 
-- (void)_drogForChange:(NSDictionary *)change
+- (void)_dragForChange:(NSDictionary *)change
 {
     
     if ( self.topEnabled && self.scrollView.contentOffset.y<0)
