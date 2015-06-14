@@ -35,29 +35,47 @@
         _musicIndex = 0;
         //默认顺序呢播放
         _playMode = PlayModelListCycle;
+        //默认为停止状态
+        _playState = PlayStateStop;
         
         NSString *musicItem = _musicUrlArray[0];
         //初始化item
         _AVPlayerItem = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:musicItem]];
         //使用item初始化播放器
         _AVPlayer = [[AVPlayer alloc]initWithPlayerItem:_AVPlayerItem];
+        
+        //默认播放第一首歌曲
+        [self start];
     }
 }
 //开启与关闭
 - (void)start
 {
-    [_AVPlayer play];
+//    if (_playState != PlayStateStarted) {
+        //如果未开启，则开始播放，播放器状态改为正在播放
+        [_AVPlayer play];
+        NSLog(@"music play!");
+        _playState = PlayStateStarted;
+//    }
 }
 
 - (void) pause
 {
-    [_AVPlayer pause];
+    if (_playState == PlayStateStarted) {
+        //如果播放器正在播放，则暂停, 并且将播放器状态改为暂停
+        [_AVPlayer pause];
+        _playState = PlayStatePause;
+    }
+//    [_AVPlayer pause];
 }
 
 - (void)stop
 {
-    [self seekToTime:0.0];
-    [_AVPlayer pause];
+    if (_playState != PlayStateStop) {
+        //如果播放器未停止，则停止播放.也即是，将播放时间归零，并停止播放
+        [self seekToTime:0.0];
+        [_AVPlayer pause];
+    }
 }
 - (void)seekToTime:(double)newSeekTime
 {

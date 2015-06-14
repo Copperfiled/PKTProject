@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @class MusicPlayerView;
+@class MusicInfoModel;
 
 @interface MusicPlayerViewController : UIViewController
 
 @property (nonatomic, strong) NSString *radioId;
 @property (nonatomic, strong) NSString *songid;
-@property (nonatomic, strong) NSMutableArray *musicUrlArray;
+@property (nonatomic, strong) NSMutableArray *musicArray;
 
-@property (nonatomic, strong) MusicPlayerView *playerView;
+@property (nonatomic, strong) MusicPlayerView *playerView;//音乐播放器视图
+@property (nonatomic, strong) MusicInfoModel *musicInfoModel;//音乐信息模型
+
 
 - (instancetype)initWithRaioId:(NSString *)radioId;
 - (instancetype)initWithSongId:(NSString *)songId;

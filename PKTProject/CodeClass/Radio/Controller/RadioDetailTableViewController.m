@@ -8,6 +8,9 @@
 
 #import "RadioDetailTableViewController.h"
 
+//controllers
+#import "MusicPlayerViewController.h"
+
 //数据模型头文件
 #import "MusicInfoModel.h"
 #import "RadioInfoModel.h"
@@ -15,6 +18,9 @@
 #import "RadioInfoModel.h"
 #import "UserInfoModel.h"
 #import "ShareInfoModel.h"
+
+//views
+#import "LLCustomView.h"
 
 //第三方库文件
 #import "UIImageView+WebCache.h"
@@ -133,13 +139,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0;
+    return 80.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     //返回头部高度
-    return 200.0;
+    return 230.0;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -148,8 +154,29 @@
     [coverImgView sd_setImageWithURL:[NSURL URLWithString:_radioInfo.coverimg]];
     [view addSubview:coverImgView];
     
+    LLCustomView *LLV = [[LLCustomView alloc]initWithFrame:CGRectMake(20, 160, SCREEN_WIDTH - 40, 20)];
+    LLV.leftLabel.font = [UIFont systemFontOfSize:10];
+    LLV.leftLabel.text = _radioInfo.title;
+    
+    LLV.rightLabel.font = [UIFont systemFontOfSize:10];
+    LLV.rightLabel.text = [_radioInfo.musicvisitnum stringValue];
+    [view addSubview:LLV];
+    
+    UILabel *descLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 180, SCREEN_WIDTH - 40, 50)];
+    descLabel.text = _radioInfo.desc;
+    descLabel.numberOfLines = 0;
+    descLabel.font = [UIFont systemFontOfSize:11];
+    [view addSubview:descLabel];
     
     return view;
+}
+#pragma mark - table view delegate -
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //传Radioid给音乐播放视图控制器
+    MusicPlayerViewController *musicVC = [[MusicPlayerViewController alloc]initWithRaioId:_radioInfo.radioid];
+    musicVC.musicInfoModel = _musicArray[indexPath.row];
+    [self.navigationController pushViewController:musicVC animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.
