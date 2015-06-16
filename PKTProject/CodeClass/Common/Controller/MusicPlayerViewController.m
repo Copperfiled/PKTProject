@@ -33,6 +33,7 @@
 //初始化音乐或者电台id
 - (instancetype)initWithRaioId:(NSString *)radioId
 {
+    NSLog(@"%s,%d",__FUNCTION__,__LINE__);
     self = [super init];
     if (self) {
         _radioId = radioId;
@@ -49,6 +50,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"%s,%d",__FUNCTION__,__LINE__);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3206CA631B2E5FAE008BA7D2 /* HomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3206CA621B2E5FAE008BA7D2 /* HomeListModel.m */; };
+		3206CA661B2E7627008BA7D2 /* HomeTingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3206CA651B2E7627008BA7D2 /* HomeTingModel.m */; };
+		321EF7791B2FC6890025D4EF /* HomeTimeLineModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 321EF7781B2FC6890025D4EF /* HomeTimeLineModelCell.m */; };
+		321EF7D91B305E120025D4EF /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321EF7D81B305E120025D4EF /* PlayViewController.m */; };
+		321EF7DC1B30652F0025D4EF /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321EF7DB1B30652F0025D4EF /* MusicListViewController.m */; };
+		321EF7DF1B3065450025D4EF /* MusicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321EF7DE1B3065450025D4EF /* MusicWebViewController.m */; };
+		321EF7E21B3065550025D4EF /* MusicUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 321EF7E11B3065550025D4EF /* MusicUserInfoViewController.m */; };
 		322D77D11B1E962C00CC0841 /* GroupListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77CF1B1E962C00CC0841 /* GroupListModel.m */; };
 		322D77D81B1E999500CC0841 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77D71B1E999500CC0841 /* GroupViewController.m */; };
 		322D77DF1B1E9A1800CC0841 /* GroupListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77DE1B1E9A1800CC0841 /* GroupListTableViewCell.m */; };
@@ -16,6 +23,18 @@
 		322D77EB1B1EAFF400CC0841 /* LLCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77EA1B1EAFF400CC0841 /* LLCustomView.m */; };
 		322D77ED1B1ECDD800CC0841 /* topic_music_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 322D77EC1B1ECDD800CC0841 /* topic_music_icon.png */; };
 		322D77F31B1F2C3800CC0841 /* TopicSketchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 322D77F21B1F2C3800CC0841 /* TopicSketchModel.m */; };
+		324C71D41B2EFE0D005E2A82 /* HomeTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324C71D31B2EFE0D005E2A82 /* HomeTimeLineModel.m */; };
+		3257178D1B2E842C00E1E7BC /* HomeTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3257178C1B2E842C00E1E7BC /* HomeTopicModel.m */; };
+		325717901B2E85B600E1E7BC /* HomePhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3257178F1B2E85B600E1E7BC /* HomePhotoModel.m */; };
+		325717931B2E938300E1E7BC /* HomeMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717921B2E938300E1E7BC /* HomeMusicModel.m */; };
+		325717961B2E941400E1E7BC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717951B2E941400E1E7BC /* BaseModel.m */; };
+		325717A01B2E96B200E1E7BC /* CellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3257179F1B2E96B200E1E7BC /* CellFactory.m */; };
+		325717A61B2E98C400E1E7BC /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717A51B2E98C400E1E7BC /* BaseCell.m */; };
+		325717A91B2E9A6200E1E7BC /* HomeListModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717A81B2E9A6200E1E7BC /* HomeListModelCell.m */; };
+		325717AC1B2E9A7500E1E7BC /* HomeTingModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717AB1B2E9A7500E1E7BC /* HomeTingModelCell.m */; };
+		325717AF1B2E9A8800E1E7BC /* HomeTopicModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717AE1B2E9A8800E1E7BC /* HomeTopicModelCell.m */; };
+		325717B21B2E9ACE00E1E7BC /* HomePhotoModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717B11B2E9ACE00E1E7BC /* HomePhotoModelCell.m */; };
+		325717B51B2E9AE000E1E7BC /* HomeMusicModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 325717B41B2E9AE000E1E7BC /* HomeMusicModelCell.m */; };
 		32A68F221B21D6360095DD90 /* MusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A68F211B21D6360095DD90 /* MusicPlayerViewController.m */; };
 		32A68F251B21D63E0095DD90 /* MusicPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A68F241B21D63E0095DD90 /* MusicPlayerView.m */; };
 		32A68F281B21D64D0095DD90 /* PlayInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A68F271B21D64D0095DD90 /* PlayInfoModel.m */; };
@@ -90,6 +109,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3206CA611B2E5FAE008BA7D2 /* HomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListModel.h; sourceTree = "<group>"; };
+		3206CA621B2E5FAE008BA7D2 /* HomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListModel.m; sourceTree = "<group>"; };
+		3206CA641B2E7627008BA7D2 /* HomeTingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTingModel.h; sourceTree = "<group>"; };
+		3206CA651B2E7627008BA7D2 /* HomeTingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTingModel.m; sourceTree = "<group>"; };
+		321EF7771B2FC6890025D4EF /* HomeTimeLineModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimeLineModelCell.h; sourceTree = "<group>"; };
+		321EF7781B2FC6890025D4EF /* HomeTimeLineModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimeLineModelCell.m; sourceTree = "<group>"; };
+		321EF7D71B305E120025D4EF /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		321EF7D81B305E120025D4EF /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		321EF7DA1B30652F0025D4EF /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
+		321EF7DB1B30652F0025D4EF /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
+		321EF7DD1B3065450025D4EF /* MusicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWebViewController.h; sourceTree = "<group>"; };
+		321EF7DE1B3065450025D4EF /* MusicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWebViewController.m; sourceTree = "<group>"; };
+		321EF7E01B3065550025D4EF /* MusicUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicUserInfoViewController.h; sourceTree = "<group>"; };
+		321EF7E11B3065550025D4EF /* MusicUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicUserInfoViewController.m; sourceTree = "<group>"; };
 		322D77CE1B1E962C00CC0841 /* GroupListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListModel.h; sourceTree = "<group>"; };
 		322D77CF1B1E962C00CC0841 /* GroupListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListModel.m; sourceTree = "<group>"; };
 		322D77D61B1E999500CC0841 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
@@ -107,8 +140,32 @@
 		322D77EC1B1ECDD800CC0841 /* topic_music_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topic_music_icon.png; sourceTree = "<group>"; };
 		322D77F11B1F2C3800CC0841 /* TopicSketchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicSketchModel.h; sourceTree = "<group>"; };
 		322D77F21B1F2C3800CC0841 /* TopicSketchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicSketchModel.m; sourceTree = "<group>"; };
+		324C71D21B2EFE0D005E2A82 /* HomeTimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTimeLineModel.h; sourceTree = "<group>"; };
+		324C71D31B2EFE0D005E2A82 /* HomeTimeLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTimeLineModel.m; sourceTree = "<group>"; };
 		325309F71B1C88950043C84B /* APPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPHeader.h; sourceTree = "<group>"; };
 		325309F81B1C8C270043C84B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3257178B1B2E842C00E1E7BC /* HomeTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTopicModel.h; sourceTree = "<group>"; };
+		3257178C1B2E842C00E1E7BC /* HomeTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTopicModel.m; sourceTree = "<group>"; };
+		3257178E1B2E85B600E1E7BC /* HomePhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePhotoModel.h; sourceTree = "<group>"; };
+		3257178F1B2E85B600E1E7BC /* HomePhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePhotoModel.m; sourceTree = "<group>"; };
+		325717911B2E938300E1E7BC /* HomeMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMusicModel.h; sourceTree = "<group>"; };
+		325717921B2E938300E1E7BC /* HomeMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMusicModel.m; sourceTree = "<group>"; };
+		325717941B2E941400E1E7BC /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		325717951B2E941400E1E7BC /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		3257179E1B2E96B200E1E7BC /* CellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFactory.h; sourceTree = "<group>"; };
+		3257179F1B2E96B200E1E7BC /* CellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFactory.m; sourceTree = "<group>"; };
+		325717A41B2E98C400E1E7BC /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		325717A51B2E98C400E1E7BC /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		325717A71B2E9A6200E1E7BC /* HomeListModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeListModelCell.h; sourceTree = "<group>"; };
+		325717A81B2E9A6200E1E7BC /* HomeListModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeListModelCell.m; sourceTree = "<group>"; };
+		325717AA1B2E9A7500E1E7BC /* HomeTingModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTingModelCell.h; sourceTree = "<group>"; };
+		325717AB1B2E9A7500E1E7BC /* HomeTingModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTingModelCell.m; sourceTree = "<group>"; };
+		325717AD1B2E9A8800E1E7BC /* HomeTopicModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTopicModelCell.h; sourceTree = "<group>"; };
+		325717AE1B2E9A8800E1E7BC /* HomeTopicModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTopicModelCell.m; sourceTree = "<group>"; };
+		325717B01B2E9ACE00E1E7BC /* HomePhotoModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePhotoModelCell.h; sourceTree = "<group>"; };
+		325717B11B2E9ACE00E1E7BC /* HomePhotoModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePhotoModelCell.m; sourceTree = "<group>"; };
+		325717B31B2E9AE000E1E7BC /* HomeMusicModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMusicModelCell.h; sourceTree = "<group>"; };
+		325717B41B2E9AE000E1E7BC /* HomeMusicModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMusicModelCell.m; sourceTree = "<group>"; };
 		32A68F201B21D6360095DD90 /* MusicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerViewController.h; sourceTree = "<group>"; };
 		32A68F211B21D6360095DD90 /* MusicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerViewController.m; sourceTree = "<group>"; };
 		32A68F231B21D63E0095DD90 /* MusicPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicPlayerView.h; path = ../Model/MusicPlayerView.h; sourceTree = "<group>"; };
@@ -275,6 +332,29 @@
 				322D77E41B1E9F8700CC0841 /* TopicContentView.m */,
 			);
 			path = VIew;
+			sourceTree = "<group>";
+		};
+		3257179D1B2E96A500E1E7BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3257179E1B2E96B200E1E7BC /* CellFactory.h */,
+				3257179F1B2E96B200E1E7BC /* CellFactory.m */,
+				325717A71B2E9A6200E1E7BC /* HomeListModelCell.h */,
+				325717A81B2E9A6200E1E7BC /* HomeListModelCell.m */,
+				325717AA1B2E9A7500E1E7BC /* HomeTingModelCell.h */,
+				325717AB1B2E9A7500E1E7BC /* HomeTingModelCell.m */,
+				325717AD1B2E9A8800E1E7BC /* HomeTopicModelCell.h */,
+				325717AE1B2E9A8800E1E7BC /* HomeTopicModelCell.m */,
+				325717B01B2E9ACE00E1E7BC /* HomePhotoModelCell.h */,
+				325717B11B2E9ACE00E1E7BC /* HomePhotoModelCell.m */,
+				325717B31B2E9AE000E1E7BC /* HomeMusicModelCell.h */,
+				325717B41B2E9AE000E1E7BC /* HomeMusicModelCell.m */,
+				321EF7771B2FC6890025D4EF /* HomeTimeLineModelCell.h */,
+				321EF7781B2FC6890025D4EF /* HomeTimeLineModelCell.m */,
+				325717A41B2E98C400E1E7BC /* BaseCell.h */,
+				325717A51B2E98C400E1E7BC /* BaseCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		32B8514C1B22852600E128DA /* View */ = {
@@ -624,9 +704,9 @@
 		6FFE5FAD1B1A00CE00F9F2CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3257179D1B2E96A500E1E7BC /* View */,
 				6FFE5FAE1B1A00CE00F9F2CE /* Controller */,
 				6FFE5FAF1B1A00CE00F9F2CE /* Model */,
-				6FFE5FB01B1A00CE00F9F2CE /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -643,15 +723,22 @@
 		6FFE5FAF1B1A00CE00F9F2CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3206CA611B2E5FAE008BA7D2 /* HomeListModel.h */,
+				3206CA621B2E5FAE008BA7D2 /* HomeListModel.m */,
+				3206CA641B2E7627008BA7D2 /* HomeTingModel.h */,
+				3206CA651B2E7627008BA7D2 /* HomeTingModel.m */,
+				3257178B1B2E842C00E1E7BC /* HomeTopicModel.h */,
+				3257178C1B2E842C00E1E7BC /* HomeTopicModel.m */,
+				3257178E1B2E85B600E1E7BC /* HomePhotoModel.h */,
+				3257178F1B2E85B600E1E7BC /* HomePhotoModel.m */,
+				325717911B2E938300E1E7BC /* HomeMusicModel.h */,
+				325717921B2E938300E1E7BC /* HomeMusicModel.m */,
+				324C71D21B2EFE0D005E2A82 /* HomeTimeLineModel.h */,
+				324C71D31B2EFE0D005E2A82 /* HomeTimeLineModel.m */,
+				325717941B2E941400E1E7BC /* BaseModel.h */,
+				325717951B2E941400E1E7BC /* BaseModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		6FFE5FB01B1A00CE00F9F2CE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		6FFE5FB11B1A00CE00F9F2CE /* Radio */ = {
@@ -671,6 +758,14 @@
 				6FFE5FCF1B1AD3E800F9F2CE /* RadioViewController.m */,
 				32D6FA811B22C9AF00269A98 /* RadioDetailTableViewController.h */,
 				32D6FA821B22C9AF00269A98 /* RadioDetailTableViewController.m */,
+				321EF7D71B305E120025D4EF /* PlayViewController.h */,
+				321EF7D81B305E120025D4EF /* PlayViewController.m */,
+				321EF7DA1B30652F0025D4EF /* MusicListViewController.h */,
+				321EF7DB1B30652F0025D4EF /* MusicListViewController.m */,
+				321EF7DD1B3065450025D4EF /* MusicWebViewController.h */,
+				321EF7DE1B3065450025D4EF /* MusicWebViewController.m */,
+				321EF7E01B3065550025D4EF /* MusicUserInfoViewController.h */,
+				321EF7E11B3065550025D4EF /* MusicUserInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -800,18 +895,22 @@
 			files = (
 				322D77D81B1E999500CC0841 /* GroupViewController.m in Sources */,
 				6FFE5FD61B1AD40D00F9F2CE /* DebrisViewController.m in Sources */,
+				325717961B2E941400E1E7BC /* BaseModel.m in Sources */,
 				6FFE5F991B19FEDE00F9F2CE /* UIImage+GIF.m in Sources */,
 				6FFE5F941B19FEDE00F9F2CE /* SDWebImageDownloader.m in Sources */,
 				6FFE5F9C1B19FEDE00F9F2CE /* UIImageView+HighlightedWebCache.m in Sources */,
 				C2FFECFD1B1C4D7300E5B6AC /* PKTRequestManager.m in Sources */,
+				325717B21B2E9ACE00E1E7BC /* HomePhotoModelCell.m in Sources */,
 				32DC686B1B1D3AF900B2772D /* TagInfoModel.m in Sources */,
 				6FFE5F981B19FEDE00F9F2CE /* UIButton+WebCache.m in Sources */,
 				6FFE5F9D1B19FEDE00F9F2CE /* UIImageView+WebCache.m in Sources */,
+				325717AC1B2E9A7500E1E7BC /* HomeTingModelCell.m in Sources */,
 				32FBBA3C1B1FE3DE00F4200D /* GroupInfoModel.m in Sources */,
 				32DC68751B1D41B900B2772D /* DebrisListViewCell.m in Sources */,
 				32A68F221B21D6360095DD90 /* MusicPlayerViewController.m in Sources */,
 				322D77E21B1E9A4500CC0841 /* TopicListTableViewCell.m in Sources */,
 				322D77F31B1F2C3800CC0841 /* TopicSketchModel.m in Sources */,
+				321EF7DF1B3065450025D4EF /* MusicWebViewController.m in Sources */,
 				6FFE5F931B19FEDE00F9F2CE /* SDWebImageDecoder.m in Sources */,
 				322D77EB1B1EAFF400CC0841 /* LLCustomView.m in Sources */,
 				32A68F2B1B21D6660095DD90 /* MusicPlayerManager.m in Sources */,
@@ -820,18 +919,24 @@
 				6FFE5F921B19FEDE00F9F2CE /* SDWebImageCompat.m in Sources */,
 				32DC685F1B1D39C200B2772D /* DebrisDetailModel.m in Sources */,
 				6FFE5F451B19FB0700F9F2CE /* main.m in Sources */,
+				321EF7E21B3065550025D4EF /* MusicUserInfoViewController.m in Sources */,
 				6FFE5F9B1B19FEDE00F9F2CE /* UIImage+WebP.m in Sources */,
 				6FFE5F901B19FEDE00F9F2CE /* NSData+ImageContentType.m in Sources */,
 				32DC68941B1DE0A000B2772D /* DebrisDetailViewController.m in Sources */,
+				321EF7D91B305E120025D4EF /* PlayViewController.m in Sources */,
+				325717A01B2E96B200E1E7BC /* CellFactory.m in Sources */,
 				32DC688E1B1D89B900B2772D /* PKTRefreshBottomView.m in Sources */,
 				6FFE5F951B19FEDE00F9F2CE /* SDWebImageDownloaderOperation.m in Sources */,
 				32DC688C1B1D89B900B2772D /* RefreshView.m in Sources */,
 				32FBBA451B20041D00F4200D /* ImageLabelView.m in Sources */,
 				6FFE5F961B19FEDE00F9F2CE /* SDWebImageManager.m in Sources */,
+				325717A61B2E98C400E1E7BC /* BaseCell.m in Sources */,
 				32A68F281B21D64D0095DD90 /* PlayInfoModel.m in Sources */,
 				322D77D11B1E962C00CC0841 /* GroupListModel.m in Sources */,
 				322D77E51B1E9F8700CC0841 /* TopicContentView.m in Sources */,
 				32FBBA891B207AA500F4200D /* UserDetailInfoModel.m in Sources */,
+				325717931B2E938300E1E7BC /* HomeMusicModel.m in Sources */,
+				3206CA631B2E5FAE008BA7D2 /* HomeListModel.m in Sources */,
 				32A68F251B21D63E0095DD90 /* MusicPlayerView.m in Sources */,
 				32D6FA831B22C9AF00269A98 /* RadioDetailTableViewController.m in Sources */,
 				32DC686A1B1D3AF900B2772D /* ShareInfoModel.m in Sources */,
@@ -839,7 +944,9 @@
 				32D6FA801B2292FF00269A98 /* RadioCollectionReusableView.m in Sources */,
 				32D6FA861B22CF6000269A98 /* MusicInfoModel.m in Sources */,
 				32FBBA421B1FFB0300F4200D /* GroupDetailModel.m in Sources */,
+				325717A91B2E9A6200E1E7BC /* HomeListModelCell.m in Sources */,
 				6FFE5F9A1B19FEDE00F9F2CE /* UIImage+MultiFormat.m in Sources */,
+				3257178D1B2E842C00E1E7BC /* HomeTopicModel.m in Sources */,
 				6FFE5F971B19FEDE00F9F2CE /* SDWebImagePrefetcher.m in Sources */,
 				322D77DF1B1E9A1800CC0841 /* GroupListTableViewCell.m in Sources */,
 				6FFE5F8F1B19FEDE00F9F2CE /* MKAnnotationView+WebCache.m in Sources */,
@@ -847,19 +954,26 @@
 				6FFE5F9E1B19FEDE00F9F2CE /* UIView+WebCacheOperation.m in Sources */,
 				32FBBA861B20794600F4200D /* UserDetailHeaderView.m in Sources */,
 				32A68F2E1B21E1D40095DD90 /* RadioInfoModel.m in Sources */,
+				325717B51B2E9AE000E1E7BC /* HomeMusicModelCell.m in Sources */,
+				324C71D41B2EFE0D005E2A82 /* HomeTimeLineModel.m in Sources */,
 				32DC68601B1D39C200B2772D /* DebrisListModel.m in Sources */,
 				6FFE5FCD1B1AD3DA00F9F2CE /* HomeViewController.m in Sources */,
+				325717901B2E85B600E1E7BC /* HomePhotoModel.m in Sources */,
 				32B8514F1B22853400E128DA /* RadioCollectionViewCell.m in Sources */,
 				6FFE5FD01B1AD3E800F9F2CE /* RadioViewController.m in Sources */,
+				3206CA661B2E7627008BA7D2 /* HomeTingModel.m in Sources */,
 				32FBBA391B1FDD6700F4200D /* GroupInfoTableViewController.m in Sources */,
 				32DC68691B1D3AF900B2772D /* CounterListModel.m in Sources */,
 				32FBBA3F1B1FF87C00F4200D /* GroupDetailTableViewController.m in Sources */,
+				321EF7791B2FC6890025D4EF /* HomeTimeLineModelCell.m in Sources */,
+				321EF7DC1B30652F0025D4EF /* MusicListViewController.m in Sources */,
 				32DC688D1B1D89B900B2772D /* PKTRefreshControl.m in Sources */,
 				32DC68971B1DEA5800B2772D /* UserInfoView.m in Sources */,
 				6FFE5F911B19FEDE00F9F2CE /* SDImageCache.m in Sources */,
 				32DC68781B1D42B900B2772D /* UIImage+AllColor.m in Sources */,
 				32DC686C1B1D3AF900B2772D /* UserInfoModel.m in Sources */,
 				322D77E81B1EAA2000CC0841 /* GroupTopicListModel.m in Sources */,
+				325717AF1B2E9A8800E1E7BC /* HomeTopicModelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

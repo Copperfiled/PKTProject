@@ -59,7 +59,7 @@
 //    }
 }
 
-- (void) pause
+- (void)pause
 {
     if (_playState == PlayStateStarted) {
         //如果播放器正在播放，则暂停, 并且将播放器状态改为暂停

@@ -175,6 +175,7 @@
 {
     //传Radioid给音乐播放视图控制器
     MusicPlayerViewController *musicVC = [[MusicPlayerViewController alloc]initWithRaioId:_radioInfo.radioid];
+    NSLog(@"%s,%d", __FUNCTION__, __LINE__);
     musicVC.musicInfoModel = _musicArray[indexPath.row];
     [self.navigationController pushViewController:musicVC animated:YES];
 }

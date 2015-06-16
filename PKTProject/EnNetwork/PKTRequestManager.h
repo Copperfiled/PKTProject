@@ -12,7 +12,6 @@
  *
  */
 
-
 #import <Foundation/Foundation.h>
 
 //声明一个 blcok 属性 用来传值

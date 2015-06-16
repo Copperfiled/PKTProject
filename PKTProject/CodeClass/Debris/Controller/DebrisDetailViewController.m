@@ -26,7 +26,6 @@
     self.navigationItem.title = @"碎片详情";
     _infoWebView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _infoWebView.delegate = self;
-    
     [self.view addSubview:_infoWebView];
     
     _userInfoView = [[UserInfoView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];

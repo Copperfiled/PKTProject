@@ -33,4 +33,7 @@
 #define API_RADIO_DETAIL @"ting/radio_detail"
 #define API_RADIO_DETAIL_LIST @"ting/radio_detail_list"
 
+//主页
+#define API_PUB_TODAY @"pub/today" //主页列表接口
+
 #endif

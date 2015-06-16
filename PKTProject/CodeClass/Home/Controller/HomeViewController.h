@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, readonly, strong) UITableView *tableView;
+
+//数据源
+@property (nonatomic, strong) NSMutableArray *homeList;
 
 @end
