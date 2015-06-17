@@ -57,18 +57,21 @@
         _progressView.backgroundColor = [UIColor grayColor];
         [self addSubview:_progressView];
         
+        //上一曲按钮
         _lastMusicBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         [_lastMusicBtn setTitle:@"上一首" forState:UIControlStateNormal];
         _lastMusicBtn.backgroundColor = [UIColor redColor];
         _lastMusicBtn.frame = CGRectMake(padding, rect.size.height - 64 - 49 * 2, (rect.size.width - padding * 2) / 3, 49);
         [self addSubview:_lastMusicBtn];
         
+        //暂停按钮
         _playAndPauseBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         _playAndPauseBtn.frame = CGRectMake(_lastMusicBtn.frame.origin.x + _lastMusicBtn.frame.size.width, _lastMusicBtn.frame.origin.y, _lastMusicBtn.frame.size.width, 49);
         [_playAndPauseBtn setTitle:@"暂停" forState:UIControlStateNormal];
         _playAndPauseBtn.backgroundColor = [UIColor blueColor];
         [self addSubview:_playAndPauseBtn];
         
+        //下一曲按钮
         _nextMusicBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         [_nextMusicBtn setTitle:@"下一首" forState:UIControlStateNormal];
         _nextMusicBtn.backgroundColor = [UIColor redColor];

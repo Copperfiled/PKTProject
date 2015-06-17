@@ -10,6 +10,7 @@
 
 //controllers
 #import "MusicPlayerViewController.h"
+#import "PlayViewController.h"
 
 //数据模型头文件
 #import "MusicInfoModel.h"
@@ -174,10 +175,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //传Radioid给音乐播放视图控制器
-    MusicPlayerViewController *musicVC = [[MusicPlayerViewController alloc]initWithRaioId:_radioInfo.radioid];
+//    MusicPlayerViewController *musicVC = [[MusicPlayerViewController alloc]initWithRaioId:_radioInfo.radioid];
+    PlayViewController *playVC = [[PlayViewController alloc]initWithRadioId:_radioInfo.radioid];
     NSLog(@"%s,%d", __FUNCTION__, __LINE__);
-    musicVC.musicInfoModel = _musicArray[indexPath.row];
-    [self.navigationController pushViewController:musicVC animated:YES];
+//    musicVC.musicInfoModel = _musicArray[indexPath.row];
+    [self.navigationController pushViewController:playVC animated:YES];
+//    [self.navigationController pushViewController:musicVC animated:YES];
 }
 /*
 // Override to support conditional editing of the table view.

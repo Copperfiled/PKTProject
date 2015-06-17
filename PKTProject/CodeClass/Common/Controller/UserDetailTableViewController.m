@@ -6,9 +6,14 @@
 //  Copyright (c) 2015年 young. All rights reserved.
 //
 
+//controller
 #import "UserDetailTableViewController.h"
+#import "PlayViewController.h"
+
+//view
 #import "UserDetailHeaderView.h"
 
+//model
 #import "UserDetailInfoModel.h"
 
 @interface UserDetailTableViewController ()
@@ -32,7 +37,7 @@
     _debriTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
     self.tableView = _debriTableView;
 //    self.tableView.contentInset = UIEdgeInsetsMake(120, 0, 0, 0);
-    
+    //请求数据
     [self requestData];
 }
 
