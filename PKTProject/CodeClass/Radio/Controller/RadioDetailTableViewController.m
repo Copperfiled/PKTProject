@@ -47,7 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tabBarController.tabBar.hidden = NO;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -178,6 +178,8 @@
 //    MusicPlayerViewController *musicVC = [[MusicPlayerViewController alloc]initWithRaioId:_radioInfo.radioid];
     PlayViewController *playVC = [[PlayViewController alloc]initWithRadioId:_radioInfo.radioid];
     NSLog(@"%s,%d", __FUNCTION__, __LINE__);
+    playVC.musicArray = _musicArray[indexPath.row];
+    playVC.musicInfoModel = _musicArray[indexPath.row];
 //    musicVC.musicInfoModel = _musicArray[indexPath.row];
     [self.navigationController pushViewController:playVC animated:YES];
 //    [self.navigationController pushViewController:musicVC animated:YES];

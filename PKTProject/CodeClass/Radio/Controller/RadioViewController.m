@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"电台";
-    
+//    [self.tabBarController.tabBar setHidden:NO];
     // Do any additional setup after loading the view.
     //初始化layout(暂时为系统自带的)
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];

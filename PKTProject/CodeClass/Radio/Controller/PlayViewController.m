@@ -43,7 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.tabBar.hidden = YES;
+//    self.tabBarController.tabBar.hidden = YES;
     // Do any additional setup after loading the view.
     NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:UIPageViewControllerSpineLocationNone] forKey:UIPageViewControllerOptionSpineLocationKey];
     //初始化pageVC 平滑、水平滑动
@@ -54,7 +54,10 @@
     
     //设置默认界面
     MusicPlayerViewController *musicPlayerVC = [[MusicPlayerViewController alloc]initWithRaioId:self.radioId];
-    musicPlayerVC.view.backgroundColor = [UIColor grayColor];
+    musicPlayerVC.musicArray = _musicArray;
+    musicPlayerVC.musicInfoModel = _musicInfoModel;
+    
+//    musicPlayerVC.view.backgroundColor = [UIColor grayColor];
     //设置子视图
     _currentIndex = 1;
     [_pageViewController setViewControllers:@[musicPlayerVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
@@ -64,6 +67,7 @@
     //设置UIToolBar属性
     [self.navigationController setToolbarHidden:NO animated:YES];
     [self.navigationController.toolbar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.toolbar setBackgroundImage:[UIImage imageNamed:@""] forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
     
     [self addCustomView];
 }
